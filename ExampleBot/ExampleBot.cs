@@ -1,8 +1,6 @@
 ﻿using BotInterface.Bot;
 using BotInterface.Game;
 using System;
-using System.Linq;
-
 
 namespace ExampleBot
 {
@@ -13,12 +11,9 @@ namespace ExampleBot
         public Move MakeMove(Gamestate gamestate)
         {
             Random rnd = new Random();
-            
-
             if (dynCounter > 0)
             {
                 Move[] values = {Move.R, Move.P, Move.S, Move.D};
-
                 var move = (Move)values[rnd.Next(values.Length)];
 
                 if (move == Move.D)
@@ -30,9 +25,7 @@ namespace ExampleBot
             else
             {
                 Move[] values = {Move.R, Move.P, Move.S};
-
                 var move = (Move)values[rnd.Next(values.Length)];
-
                 return move;
             }
         }
