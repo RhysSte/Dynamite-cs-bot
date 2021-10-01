@@ -2,6 +2,10 @@
 {
     public enum Move
     {
-        R='R',P='P',S='S',W='W',D='D'
+        R='R',
+        P='P',
+        S='S',
+        W='W',
+        D='D'
     }
 }
